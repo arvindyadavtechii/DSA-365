@@ -10,7 +10,6 @@ I update this repository **daily** whenever I solve a new LeetCode problem 📅�
 ## 📌 What You’ll Find Here
 
 - ✅ Daily solved **LeetCode problems**
-- 💡 **Clear explanations** for each solution
 - 🧠 **Optimized approaches** (Brute Force → Optimal)
 - 🧾 Well-structured and readable code
 - 🌐 Solutions written mainly in **JavaScript / Python** (depending on the problem)
@@ -25,12 +24,9 @@ I update this repository **daily** whenever I solve a new LeetCode problem 📅�
 ├── Hard/
 └── README.md
 
-yaml
-Copy code
 
 Each problem includes:
 - 📄 Problem statement (short summary)
-- 🧩 Approach explanation
 - 💻 Code solution
 - ⏱️ Time & Space Complexity
 
@@ -40,7 +36,7 @@ Each problem includes:
 
 - Build **strong DSA & problem-solving skills**
 - Maintain **consistency** by solving problems daily
-- Help others learn through **simple explanations**
+- Help others learn through **this 365 days DSA repository**
 - Track my **LeetCode journey and progress**
 
 ---
