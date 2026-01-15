@@ -1,5 +1,4 @@
 var findMedianSortedArrays = function(nums1, nums2) {
-    // Ensure nums1 is the smaller array
     if (nums1.length > nums2.length) {
         return findMedianSortedArrays(nums2, nums1);
     }
@@ -18,7 +17,6 @@ var findMedianSortedArrays = function(nums1, nums2) {
         let left2 = (cut2 === 0) ? -Infinity : nums2[cut2 - 1];
         let right2 = (cut2 === n) ? Infinity : nums2[cut2];
 
-        // Correct partition
         if (left1 <= right2 && left2 <= right1) {
             if ((m + n) % 2 === 0) {
                 return (Math.max(left1, left2) + Math.min(right1, right2)) / 2;
@@ -26,7 +24,7 @@ var findMedianSortedArrays = function(nums1, nums2) {
                 return Math.max(left1, left2);
             }
         }
-        // Move left
+
         else if (left1 > right2) {
             high = cut1 - 1;
         }
