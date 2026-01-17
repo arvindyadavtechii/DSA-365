@@ -1,4 +1,4 @@
-# LeetCode Daily Solutions 🚀
+# 🚀 LeetCode Daily Solutions 
 
 Welcome to my **LeetCode Solutions Repository**! 👨‍💻✨  
 This repository contains all the **LeetCode problems I have solved**, along with **clean, optimized, and well-explained solutions**.
