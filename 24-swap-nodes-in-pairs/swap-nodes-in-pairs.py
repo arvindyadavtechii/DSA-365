@@ -1,22 +1,12 @@
-class ListNode:
-    def __init__(self, val=0, next=None):
-        self.val = val
-        self.next = next
-
 class Solution:
     def swapPairs(self, head):
-        dummy = ListNode(0)
-        dummy.next = head
-        prev = dummy
+        if not head or not head.next:
+            return head
 
-        while prev.next and prev.next.next:
-            first = prev.next
-            second = first.next
+        first = head
+        second = head.next
 
-            first.next = second.next
-            second.next = first
-            prev.next = second
+        first.next = self.swapPairs(second.next)
+        second.next = first
 
-            prev = first
-
-        return dummy.next
+        return second
