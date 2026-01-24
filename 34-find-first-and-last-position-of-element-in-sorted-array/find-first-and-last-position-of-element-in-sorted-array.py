@@ -8,7 +8,7 @@ class Solution:
                 mid = (left + right) // 2
                 if nums[mid] == target:
                     first = mid
-                    right = mid - 1  # move left
+                    right = mid - 1  
                 elif nums[mid] < target:
                     left = mid + 1
                 else:
@@ -24,7 +24,7 @@ class Solution:
                 mid = (left + right) // 2
                 if nums[mid] == target:
                     last = mid
-                    left = mid + 1  # move right
+                    left = mid + 1  
                 elif nums[mid] < target:
                     left = mid + 1
                 else:
