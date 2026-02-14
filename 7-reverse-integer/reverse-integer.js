@@ -14,7 +14,7 @@ var reverse = function(x) {
         let digit = x % 10;
         x = Math.floor(x / 10);
 
-        // Overflow check
+
         if (rev > Math.floor((INT_MAX - digit) / 10)) {
             return 0;
         }
