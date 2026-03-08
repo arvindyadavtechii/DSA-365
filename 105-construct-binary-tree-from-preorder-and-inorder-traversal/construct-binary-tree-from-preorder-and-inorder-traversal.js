@@ -1,23 +1,26 @@
 var buildTree = function(preorder, inorder) {
 
-    if (!preorder.length || !inorder.length) {
-        return null;
+    let map = new Map();
+
+    for (let i = 0; i < inorder.length; i++) {
+        map.set(inorder[i], i);
     }
 
-    let rootVal = preorder[0];
-    let root = new TreeNode(rootVal);
+    let preIndex = 0;
 
-    let index = inorder.indexOf(rootVal);
+    function helper(left, right) {
+        if (left > right) return null;
 
-    root.left = buildTree(
-        preorder.slice(1, index + 1),
-        inorder.slice(0, index)
-    );
+        let rootVal = preorder[preIndex++];
+        let root = new TreeNode(rootVal);
 
-    root.right = buildTree(
-        preorder.slice(index + 1),
-        inorder.slice(index + 1)
-    );
+        let mid = map.get(rootVal);
 
-    return root;
+        root.left = helper(left, mid - 1);
+        root.right = helper(mid + 1, right);
+
+        return root;
+    }
+
+    return helper(0, inorder.length - 1);
 };
